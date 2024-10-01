@@ -379,18 +379,21 @@ h1 span {
 .header .header-content .hero img {
     width: 40vw;
     border-radius: 50px 50px 10px 10px;
+    filter: drop-shadow(20px 10px 10px rgba(0, 0, 0, 0.204));
 }
 
 header .cerise {
     position: absolute;
     top: -40%;
     left: -5%;
+    filter: drop-shadow(10px 2px 10px #000);
 }
 
 header .ananas {
     position: absolute;
     bottom: -30%;
     right: -5%;
+    filter: drop-shadow(10px 2px 10px #000);
 }
 
 @media screen and (max-width: 767px) {
@@ -445,10 +448,20 @@ main .contents .item .image {
     background-color: #f3f9ed;
     border-radius: 20px;
     margin-bottom: 20px;
+    /* filter: grayscale(0); */
+}
+
+main .contents:hover .item:not(:hover){
+    filter: grayscale(1) blur(2px);
+}
+
+main .contents .item .image:hover {
+    filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.204))
 }
 
 main .contents .item .image img {
     width: 300px;
+    filter: drop-shadow(20px 10px 10px rgba(0, 0, 0, 0.204));
 }
 
 main .contents .item .description h4 {
@@ -461,4 +474,5 @@ main .banane {
     position: absolute;
     bottom: -5%;
     right: 5%;
+    filter: drop-shadow(10px 2px 10px #000);
 }
