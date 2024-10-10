@@ -418,7 +418,7 @@ main {
     position: relative;
 }
 
-main .header {
+.head {
     display: flex;
     width: 100%;
     height: 50px;
@@ -426,7 +426,8 @@ main .header {
     align-content: center;
 }
 
-main .contents {
+.card {
+    position: relative;
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
@@ -434,12 +435,13 @@ main .contents {
     justify-content: space-evenly;
 }
 
-main .contents .item {
+.card .item {
+    position: relative;
     max-width: 280px;
     margin-bottom: 30px;
 }
 
-main .contents .item .image {
+.card .item .image {
     width: 100%;
     height: 250px;
     display: flex;
@@ -451,20 +453,20 @@ main .contents .item .image {
     /* filter: grayscale(0); */
 }
 
-main .contents:hover .item:not(:hover){
+main .card:hover .item:not(:hover){
     filter: grayscale(1) blur(2px);
 }
 
-main .contents .item .image:hover {
+.card .item .image:hover {
     filter: drop-shadow(2px 2px 10px rgba(0, 0, 0, 0.204))
 }
 
-main .contents .item .image img {
+.card .item .image img {
     width: 300px;
     filter: drop-shadow(20px 10px 10px rgba(0, 0, 0, 0.204));
 }
 
-main .contents .item .description h4 {
+.card .item .description h4 {
     font-size: 1.5rem;
     color: #C91223;
     margin: 10px 0;
@@ -523,15 +525,6 @@ main .banane {
     width: 100%;
     height: fit-content;
     position: relative;
-    background-color: #fafcf8;
-}
-
-#preparation .header {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    justify-content: space-between;
-    align-content: center;
     background-color: #fafcf8;
 }
 
@@ -625,7 +618,127 @@ main .banane {
         display: none;
     }
 
-    main .header, #preparation .header {
+    .head {
         justify-content: center;
     }
+}
+
+/* newsletters */
+#newsletters {
+    width: 100%;
+    height: 400px;
+    background: url(./assets/medias/bannière.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 30px;
+}
+#newsletters .container{
+    height: 100%;
+}
+.avocat {
+    position: absolute;
+    top: 25px;
+    left: 150px;
+}
+
+.avocat img {
+    width: 80px;
+}
+
+#newsletters .content {
+    height: 100%;
+    max-width: 670px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#newsletters .content .title {
+    width: 100%;
+    height: 80px;
+}
+#newsletters .content .title h2 {
+    color: #f3f9ed;
+    font-size: 2rem;
+}
+
+#newsletters .content .descript {
+    height: 50px;
+}
+
+#newsletters .content .descript p {
+    color: #f3f9ed;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+#newsletters .content form {
+    width: 300px;
+    background-color: #afdfc8;
+    border-radius: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#newsletters .content form input {
+    border: none;
+    border-radius: 50px;
+    padding-left: 10px;
+    height: 100%;
+    width: 200px;
+    background: transparent;
+}
+#newsletters .content form input:focus {
+    outline: none;
+}
+#newsletters .content form button {
+    height: 100%;
+    border: none;
+    background-color: #e56338;
+    width: 100px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    #newsletters {
+        background-position: right;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #newsletters .content .title h2,
+    #newsletters .content .descript p {
+        color: #908f8d;
+        font-weight: bold;
+    }
+    #newsletters .content {
+        background-color: rgba(0, 0, 0, 0.418);
+    }
+}
+
+.card .item .float {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #e56338;
+    border-radius: 50px;
+    border: none;
+    z-index: 999;
+}
+
+.card .item .float p {
+    margin: 5px 10px;
+    color: #e1dfdf;
+}
+
+#vitrine img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
