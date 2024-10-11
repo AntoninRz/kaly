@@ -666,7 +666,8 @@ main .banane {
 }
 
 #newsletters .content .descript {
-    height: 50px;
+    height: 100px;
+    align-content: center;
 }
 
 #newsletters .content .descript p {
@@ -713,7 +714,7 @@ main .banane {
 @media screen and (max-width: 670px) {
     #newsletters .content .title h2,
     #newsletters .content .descript p {
-        color: #908f8d;
+        color: #fff;
         font-weight: bold;
     }
     #newsletters .content {
@@ -758,7 +759,7 @@ footer {
 
 footer p {
     text-align: center;
-    width: 500px;
+    max-width: 500px;
     color: #e1dfdf;
 }
 
