@@ -18,6 +18,7 @@ body {
     background-color: #ffffff;
     border-radius: 50px 50px 10px 10px;
     border: solid 5px #afdfc8;
+    overflow-x: hidden;
 }
 
 .container {
@@ -741,4 +742,71 @@ main .banane {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+footer {
+    width: 100%;
+    min-width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #000;
+}
+
+footer p {
+    text-align: center;
+    width: 500px;
+    color: #e1dfdf;
+}
+
+.reseaux-sociaux {
+    display: flex;
+    width: 200px;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reseaux-sociaux div {
+    width: 40px;
+    height: 40px;
+    background-color: #C91223;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseaux-sociaux i {
+    font-size: 1.2rem;
+    color: #f3f9ed;
+}
+
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30px;
+    background-color: #0b0c10;
+}
+
+.copyright .copywrite p {
+    color: #eee;
+    font-size: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 2px 10px;
+    text-align: center;
+}
+.copyright .copywrite p span {
+    color: #e56338;
+}
+
+.copyright a:hover {
+    font-size: 0.5rem;
 }
